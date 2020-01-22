@@ -1,1 +1,12 @@
 Runtime: 532 ms
+
+
+class Solution:
+    def findDuplicates(self, nums):
+        nums.sort()                       #Sorting the list first
+        res = []                          #Creating a new list that we will use
+        for i in range(len(nums)-1):      #A for loop to interate over the sorted array
+            if nums[i] == nums[i+1]:      #If an index matches it's adjacent index, then
+                res.append(nums[i])       #Append the new list and add the duplicate numbers that matched
+        return res                        #Return appended list
+        
